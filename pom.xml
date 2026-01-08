@@ -24,6 +24,27 @@
                     <useSystemClassLoader>true</useSystemClassLoader>
                 </configuration>
             </plugin>
+
+            <plugin>
+                <groupId>au.com.dius.pact.provider</groupId>
+                <artifactId>maven</artifactId>
+                <version>4.6.19</version>
+                <executions>
+                    <execution>
+                        <id>publish-pacts</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>publish</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <pactBrokerUrl>${pact.broker.url}</pactBrokerUrl>
+                    <pactBrokerUsername>${pact.broker.username}</pactBrokerUsername>
+                    <pactBrokerPassword>${pact.broker.password}</pactBrokerPassword>
+                    <pactDirectory>${project.build.directory}/pacts</pactDirectory>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
     <dependencies>
