@@ -6,7 +6,7 @@
 
     <groupId>cheers.demo</groupId>
     <artifactId>pact-consumer-restassured-demo</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>${version}</version>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
